@@ -16,6 +16,13 @@ const Loginform = () => {
   const handlePasswordChange =(e) =>{
     setPassword(e.target.value);
   }
+
+  const handleSubmit =(e) =>{
+    e.preventDefault();
+
+    console.log({username});
+    console.log({password});
+  }
   return (
     <div className="wrapper">
       <form action="">

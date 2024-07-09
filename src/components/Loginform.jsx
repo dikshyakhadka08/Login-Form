@@ -1,20 +1,31 @@
-import React from "react";
+import React,{useState} from "react";
 import "../App.css";
 import "./Loginform.css";
 import { FaUser ,FaLock} from "react-icons/fa";
 
 
 const Loginform = () => {
+
+  const [username,setUsername]= useState("");
+  const [password,setPassword]=useState("");
+
+  const handleUsernameChange =(e) =>{
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange =(e) =>{
+    setPassword(e.target.value);
+  }
   return (
     <div className="wrapper">
       <form action="">
         <h1>Login Form</h1>
         <div className="input-box">
-        <FaUser className="icon" /> <input type="text" placeholder="Username" required />
+        <FaUser className="icon" /> <input type="text" placeholder="Username" value ={username} onChange ={handleUsernameChange} required/>
         </div>
 
         <div className="input-box">
-        <FaLock className="icon"/><input type="password" placeholder="Password" required />
+        <FaLock className="icon"/><input type="password" placeholder="Password" value ={password} onChange ={handlePasswordChange}required />
         </div>
 
         <div className="remember-forgot">

@@ -44,6 +44,7 @@ body{
 .register-link p a{
     color:white;
     font-weight:600;
+    text-align: left;
 }
 
 .register-link p a:hover{
